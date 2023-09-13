@@ -4,7 +4,7 @@ FROM node:14-alpine
 
 WORKDIR /opt/app
 
-ADD package*.json .
+ADD package*.json ./
 
 RUN npm install
 
