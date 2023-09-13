@@ -1,12 +1,14 @@
-FROM node:14
+FROM node:14-alpine
 
 # EXPOSE 8080
 
 WORKDIR /opt/app
 
-ADD . .
+ADD package*.json .
 
 RUN npm install
+
+ADD . .
 
 RUN npm run build api
 
