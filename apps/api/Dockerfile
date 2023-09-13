@@ -1,6 +1,6 @@
 FROM node:14
 
-EXPOSE 8080
+# EXPOSE 8080
 
 WORKDIR /opt/app
 
@@ -8,7 +8,7 @@ ADD . .
 
 RUN npm install
 
-RUN npm build api
+RUN npm run build api
 
 CMD [ "node", "./dist/apps/api/main.js" ]
 
